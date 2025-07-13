@@ -5,5 +5,5 @@ export async function GetBlogs(): Promise<IBlog[]> {
   await dbConnect();
 
   const blogs = await Blog.find({});
-  return blogs;
+  return blogs.map((blog) => blog._doc);
 }

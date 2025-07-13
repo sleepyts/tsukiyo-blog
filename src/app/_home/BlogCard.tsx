@@ -2,7 +2,6 @@ import { IBlog } from '@/lib/models/Blog';
 import { Calendar, ChevronRight, Pin, Tag } from 'lucide-react';
 
 export function BlogCard(props: IBlog) {
-  console.log('BlogCard props:', props);
   return (
     <div className="flex flex-col p-4 border rounded-md gap-6">
       <div className="flex justify-between">
@@ -20,7 +19,9 @@ export function BlogCard(props: IBlog) {
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2">
           <Calendar className="w-3.5" />
-          <span className="text-xs">{props.createdAt.toDateString()}</span>
+          <span className="text-xs">
+            {props.createdAt.toLocaleDateString()}
+          </span>
         </div>
         <div className="flex items-center gap-2 ">
           <Tag className="w-3.5" />
