@@ -1,8 +1,9 @@
 import { model, models, Schema } from 'mongoose';
 
-export interface IBlog extends Document {
+export interface IBlog {
   id: number;
   title: string;
+  content: string;
   description: string;
   pinned: boolean;
   tags: string[];
@@ -11,7 +12,12 @@ export interface IBlog extends Document {
 }
 
 const BlogSchema = new Schema<IBlog>({
+  id: {
+    type: Number,
+    required: true,
+  },
   title: { type: String, required: true },
+  content: { type: String, required: true },
   description: { type: String, required: true },
   pinned: { type: Boolean, default: false },
   tags: { type: [String], default: [] },

@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { Book, Home, Info } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { Button } from "../ui/button";
+import { Book, Home, Info } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { Button } from '../ui/button';
 
 const navItems = [
-  { value: "/", label: "Home", icon: <Home /> },
-  { value: "/archives", label: "Archives", icon: <Book /> },
-  { value: "/about", label: "About", icon: <Info /> },
+  { value: '/', label: 'Home', icon: <Home /> },
+  { value: '/archives', label: 'Archives', icon: <Book /> },
+  { value: '/about', label: 'About', icon: <Info /> },
 ];
 
 export function Header() {
@@ -20,7 +20,7 @@ export function Header() {
         {navItems.map((item) => (
           <Button
             key={item.value}
-            variant={"ghost"}
+            variant={'ghost'}
             className="px-4 py-2 hover:cursor-pointer"
             onClick={() => router.push(item.value)}
           >

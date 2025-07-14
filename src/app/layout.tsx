@@ -32,7 +32,7 @@ export default function RootLayout({
             "var(--font-roboto-mono), var(--font-noto-sans-sc), 'Noto Sans SC', sans-serif",
         }}
       >
-        <div className="w-[55%] mx-auto flex-grow flex flex-col">
+        <div className="w-[90%] md:w-[55%] mx-auto flex-grow flex flex-col">
           <Header />
           <main className="flex-grow min-h-screen">{children}</main>
           <footer className="py-4 text-center text-sm text-muted-foreground border-t border-gray-200">
