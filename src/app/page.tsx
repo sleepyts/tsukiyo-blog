@@ -1,18 +1,18 @@
-import { BlogCard } from '@/components/_home/BlogCard';
-import { PageWrapper } from '@/components/PageWrapper';
+import { BlogCard } from '@/components/_home/blog-card';
+import { PageWrapper } from '@/components/page-wrapper';
 import { IBlog } from '@/lib/models/Blog';
-import { GetBlogs } from './api/blog/route';
+import { GetBlogs } from './api/blogs/route';
 
 export default async function Home() {
   const blogData: IBlog[] = await GetBlogs();
+
   // const blogData: IBlog[] = [
   //   {
-  //     id: 12,
-  //     title: 'Local Test',
-  //     content: 'Here is content',
-  //     description: 'Here is description',
-  //     pinned: true,
-  //     tags: ['tag1', 'tag2'],
+  //     id: 1,
+  //     title: '123',
+  //     description: '123',
+  //     pinned: false,
+  //     tags: [],
   //     createdAt: new Date(),
   //     updatedAt: new Date(),
   //   },

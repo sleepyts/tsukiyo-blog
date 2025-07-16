@@ -2,7 +2,7 @@
 
 import { Book, Home, Info } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { Button } from '../ui/button';
+import { Button } from 'shadcn/button';
 
 const navItems = [
   { value: '/', label: 'Home', icon: <Home /> },

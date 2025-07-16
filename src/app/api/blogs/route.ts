@@ -19,12 +19,3 @@ export async function GetBlogs(
     .limit(pageSize);
   return blogs.map((blog) => blog._doc);
 }
-
-export async function getBlogContent(id: number) {
-  await dbConnect();
-  const blog = await Blog.findOne({ id: Number(id) });
-  if (!blog) {
-    throw new Error('Blog not found');
-  }
-  return blog._doc.content;
-}

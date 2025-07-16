@@ -1,4 +1,4 @@
-import { PageWrapper } from '@/components/PageWrapper';
+import { PageWrapper } from '@/components/page-wrapper';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
